@@ -10,17 +10,6 @@ export class FinanceItemLambdaService {
             body: {financeItems: JSON.parse(JSON.stringify(this._financeItems))},
             status: 200
           };
-        
-    //     var lambdaService = new Lambda({accessKeyId: 'AKIA2VOWTIGBNR7XPBQD', secretAccessKey: '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', region: 'us-east-2', apiVersion: '2015-03-31'});
-    //     lambdaService.invoke(request, function(error, data) {
-    //         if (error) {
-    //           prompt(error.message);
-    //           return null;
-    //         } else {
-    //           return JSON.parse(data.Payload.toString());
-    //         }
-    //       });
-    //     return null;
         return responseOptions;
     }
 
