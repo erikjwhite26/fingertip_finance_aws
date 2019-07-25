@@ -1,11 +1,11 @@
 {
-  "name": "angular2-essential-training",
-  "version": "2.0.0",
-  "author": "Justin Schwartzenberger",
-  "description": "This project is the repository for my Angular Essential Training course on Lynda.com and LinkedIn Learning.",
+  "name": "fingertip_finance",
+  "version": "1.0.0",
+  "author": "Erik White",
+  "description": "This project was built on Schwarty's angular essential training example.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coursefiles/angular2-essential-training.git"
+    "url": "https://github.com/erikjwhite26/fingertip_finance_aws"
   },
   "scripts": {
     "clean": "rimraf app/**/*.js app/**/*.js.map",
@@ -23,9 +23,10 @@
     "@angular/platform-browser": "5.0.0",
     "@angular/platform-browser-dynamic": "5.0.0",
     "@angular/router": "5.0.0",
-    "systemjs": "0.19.39",
+    "aws-sdk": "^2.497.0",
     "core-js": "2.4.1",
     "rxjs": "5.5.0",
+    "systemjs": "0.19.39",
     "zone.js": "0.8.4"
   },
   "devDependencies": {

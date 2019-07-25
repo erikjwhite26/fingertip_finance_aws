@@ -1,0 +1,17 @@
+<header 
+    [ngClass]="{'finance-income':type === 'INCOME', 'finance-bill':type === 'BILL'}">
+    <h2>{{type}}</h2>
+    <div>{{financeItems}}</div>
+</header>
+<section>
+  <mw-finance-item
+    [ngClass]="{'finance-income': financeItem.type==='INCOME', 'finance-bill':financeItem.type==='BILL'}" 
+    *ngFor="let financeItem of financeItems"
+    [financeItem]="financeItem"
+    (delete)="onFinanceItemDelete($event)"></mw-finance-item>
+</section>
+<footer>
+  <a routerLink="/add">
+    <img src="media/01.png" class="icon" />
+  </a>
+</footer>

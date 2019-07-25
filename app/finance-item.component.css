@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 200px;
+  border: 2px solid;
+  background-color: #29394b;
+  padding: 10px;
+  color: #bdc2c5;
+}
+h2 {
+  font-size: 1.6em;
+  flex: 1;
+}
+:host.finance-income {
+  border-color: #45bf94;
+}
+:host.finance-income > h2 {
+  color: #45bf94;
+}
+:host.finance-bill {
+  border-color: #ec4342;
+}
+:host.finance-bill > h2 {
+  color: #ec4342;
+}
+.tools {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.delete {
+  display: block;
+  background-color: #ec4342;
+  padding: 4px;
+  font-size: .8em;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+}

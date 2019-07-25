@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MediaItemComponent } from './media-item.component';
-import { MediaItemListComponent } from './media-item-list.component';
-import { FavoriteDirective } from './favorite.directive';
-import { CategoryListPipe } from './category-list.pipe';
-import { MediaItemFormComponent } from './media-item-form.component';
-import { MediaItemService } from './media-item.service';
+import { FinanceItemComponent } from './finance-item.component';
+import { FinanceItemListComponent } from './finance-item-list.component';
+import { FinanceItemFormComponent } from './finance-item-form.component';
+import { FinanceItemService } from './finance-item.service';
+import { FinanceItemLambdaService } from './finance-item-lambda-service';
+// import { Lambda } from 'aws-sdk';
 import { lookupListToken, lookupLists } from './providers';
-import { MockXHRBackend } from './mock-xhr-backend';
 import { routing } from './app.routing';
 
 @NgModule({
@@ -19,20 +18,19 @@ import { routing } from './app.routing';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    // Lambda,
     routing
   ],
   declarations: [
     AppComponent,
-    MediaItemComponent,
-    MediaItemListComponent,
-    FavoriteDirective,
-    CategoryListPipe,
-    MediaItemFormComponent
+    FinanceItemComponent,
+    FinanceItemListComponent,
+    FinanceItemFormComponent
   ],
   providers: [
-    MediaItemService,
+    FinanceItemService,
+    FinanceItemLambdaService,
     { provide: lookupListToken, useValue: lookupLists },
-    { provide: HttpXhrBackend, useClass: MockXHRBackend }
   ],
   bootstrap: [
     AppComponent

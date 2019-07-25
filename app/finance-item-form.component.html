@@ -1,0 +1,40 @@
+<header>
+  <h2>Add a Finance Item</h2>
+</header>
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
+  <ul>
+    <li>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" formControlName="name">
+      <div *ngIf="form.get('name').hasError('pattern')" class="error">
+        Name has invalid characters
+      </div>
+    </li>
+    <li>
+      <label for="type">Type</label>
+      <select name="type" id="type" formControlName="type">
+        <option *ngFor="let type of lookupLists.types" value="{{type}}">{{type}}</option>
+      </select>
+    </li>
+    <li>
+      <label for="amount">Amount</label>
+      <input type="text" name="amount" id="amount" formControlName="amount">
+      <div *ngIf="form.get('amount').hasError('pattern')" class="error">
+        Amount has invalid characters
+      </div>
+    </li>
+    <li>
+      <label for="occuranceDate">Occurance Date</label>
+      <input type="text" name="occuranceDate" id="occuranceDate" formControlName="occuranceDate">
+    </li>
+    <li>
+      <label for="occuranceType">Frequency</label>
+      <select name="occuranceType" id="occuranceType" formControlName="occuranceType">
+        <option *ngFor="let occuranceType of lookupLists.occuranceTypes" value="{{occuranceType}}">{{occuranceType}}</option>
+      </select>
+    </li>
+  </ul>
+  <button type="submit" [disabled]="!form.valid">Save</button>
+</form>

@@ -1,0 +1,11 @@
+<h2>{{ financeItem.name }}</h2>
+<div>{{ financeItem.type }}</div>
+<ng-template [ngIf]="financeItem.occuranceDate">
+  <div>Occurs on {{ financeItem.occuranceDate | date: 'shortDate' }}</div>
+</ng-template>
+<div>{{ financeItem.occuranceType }}</div>
+<div class="tools">
+  <a class="delete" (click)="onDelete()">
+    remove
+  </a>
+</div>

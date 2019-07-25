@@ -13,12 +13,14 @@
     '@angular/common/http': 'node_modules/@angular/common/bundles/common-http.umd.js',
     'tslib': 'node_modules/tslib/tslib.js',
     'rxjs': 'node_modules/rxjs',
-    'rxjs/operators': 'node_modules/rxjs/operators/index'
+    'rxjs/operators': 'node_modules/rxjs/operators/index',
+    'aws-sdk': 'node_modules/aws-sdk'
   };
 
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app': { main: 'main.js', defaultExtension: 'js' },
+    'aws-sdk': { defaultExtension: 'js', main: 'dist/aws-sdk.js' },
     'rxjs': { defaultExtension: 'js' }
   };
 
